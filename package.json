@@ -1,0 +1,18 @@
+{
+  "name": "genimg-image-generator",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "homepage": "https://github.com/SazidFaiaz/GenIMG-Image-generator-Full#readme",
+  "bugs": {
+    "url": "https://github.com/SazidFaiaz/GenIMG-Image-generator-Full/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SazidFaiaz/GenIMG-Image-generator-Full.git"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
