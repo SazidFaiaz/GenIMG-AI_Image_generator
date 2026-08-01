@@ -9,9 +9,10 @@ const isCloudinaryConfigured = () => {
   );
 };
 
-const uploadImage = async (base64Image, fallbackUrl) => {
+const uploadImage = async (base64Image) => {
+  // Without Cloudinary, return base64 so the UI can still show the image
   if (!isCloudinaryConfigured()) {
-    return fallbackUrl || base64Image;
+    return base64Image;
   }
 
   cloudinary.config({
