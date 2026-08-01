@@ -76,7 +76,12 @@ const Home = () => {
       setPosts(res?.data || []);
       setFilteredPosts(res?.data || []);
     } catch (err) {
-      setError(err?.response?.data?.message || "Failed to load posts");
+      const apiMessage = err?.response?.data?.message;
+      const networkMessage =
+        err?.code === "ERR_NETWORK"
+          ? "Cannot reach backend. Make sure the server is running on port 8080."
+          : null;
+      setError(apiMessage || networkMessage || "Failed to load posts");
     } finally {
       setLoading(false);
     }
