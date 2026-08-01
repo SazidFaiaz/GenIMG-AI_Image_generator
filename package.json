@@ -1,7 +1,7 @@
 {
   "name": "genimg-image-generator",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "GenIMG AI Image Generator - Full Stack MERN App",
   "homepage": "https://github.com/SazidFaiaz/GenIMG-Image-generator-Full#readme",
   "bugs": {
     "url": "https://github.com/SazidFaiaz/GenIMG-Image-generator-Full/issues"
@@ -13,6 +13,12 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "npm run dev --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }

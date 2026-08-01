@@ -80,7 +80,7 @@ const ImageCard = ({ item }) => {
         >
           <Author>
             <Avatar sx={{ width: "32px", height: "32px" }}>
-              {item?.name[0]}
+              {item?.name?.[0]}
             </Avatar>
             {item?.name}
           </Author>
